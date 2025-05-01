@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Results</title></head>
+<body>
+  <h2>Analysis Results</h2>
+  <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+  <p><strong>Confidence Scores:</strong><br>
+     Positive: {{ scores.positive }}<br>
+     Neutral: {{ scores.neutral }}<br>
+     Negative: {{ scores.negative }}</p>
+
+  <h3>Key Phrases:</h3>
+  <ul>
+    {% for phrase in phrases %}
+      <li>{{ phrase }}</li>
+    {% endfor %}
+  </ul>
+  <a href="/">Analyze Another Resume</a>
+</body>
+</html>
